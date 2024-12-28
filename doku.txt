@@ -1,0 +1,41 @@
+
+
+Avainsanoja; React, node, sql, rest-rajapinta, crud-sovellus... 
+
+tarkoituksena luoda käyttäjälle mahdollisuus ylläpitää muumimuki kokoelmaa helpossa käyttöliittymässä
+
+
+
+PROJEKTIN TIEDOSTORAKENNE
+
+projekti/
+├── Sellaista/                 # React-käyttöliittymä
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── layout/
+|   |   |   |--
+│   │   │   │   ├── footer.js
+│   │   │   │   ├── header.js
+│   │   │   └── pages/       # Yhteiset komponentit kuten lomakkeet, navit
+│   │   │   │   ├── contact.js
+│   │   │   │   ├── home.js
+│   │   │   │   └── notfound.js
+|   |   |   |   |──mukitable.js 
+
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   └── styles/           # Kaikki tyylitiedostot
+│   └── package.json
+├── sellaista-api/                  # Node.js-backend
+│   ├── controllers/
+│   │   └── mukitController.js
+│   ├── database/
+│   │   └── db.js
+│   ├── routes/
+│   │   └── routes.js
+│   ├── server.js
+│   └── package.json
+├── README.md                 # Dokumentaatio projektista
+└── .env                      # Ympäristömuuttujat
+

@@ -1,0 +1,18 @@
+{
+  "name": "uusi-kansio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "startfull": "concurrently \"npm run sellaista\" \"npm run sellaista-api\"",
+    "sellaista": "cd sellaista && npm start",
+    "sellaista-api": "cd sellaista-api && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

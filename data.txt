@@ -1,0 +1,35 @@
+
+-- Luo tietokanta
+CREATE DATABASE IF NOT EXISTS MuumiMukiDB;
+
+USE MuumiMukiDB;
+
+DROP TABLE IF EXISTS mukit;
+
+-- Luodaan mukit-taulu
+CREATE TABLE mukit (
+    id INT AUTO_INCREMENT PRIMARY KEY,           -- Mukin yksilöllinen ID
+    nimi VARCHAR(100) NOT NULL,                  -- Mukin nimi
+    kuvaus TEXT,                                 -- Mukin kuvaus
+    tyyppi ENUM('kesä', 'talvi', 'hahmo', 'erikoismuki') NOT NULL,  -- Mukin tyyppi
+    kokoelmassa BOOLEAN DEFAULT 0,               -- 1 = Kokoelmassa, 0 = Ei kokoelmassa
+    ostohinta DECIMAL(10, 2),                    -- Mukin ostohinta
+    hintanyt DECIMAL(10, 2),                     -- Mukin tämänhetkinen hinta
+    kuvalinkki VARCHAR(255)                      -- Linkki mukin kuvaan
+);
+
+-- Lisätään esimerkkitietoja mukit-tauluun
+INSERT INTO mukit (nimi, kuvaus, tyyppi, kokoelmassa, ostohinta, hintanyt, kuvalinkki)
+VALUES 
+    ('Perhe', 'Mukin numero on 23, hinta-arvio 45-75€.', 'hahmo', 1 , 15.00, 30.00, 'https://www.muumimukit.com/wp-content/uploads/2014/10/Muumimuki-Perhe.jpg'),
+    ('Mörkö', 'Poistunut tuotannosta, tunnettu muki', 'hahmo', 1 , 15.00, 28.00, 'https://www.muumimukit.com/wp-content/uploads/2014/10/Muumimuki-Morko.jpg'),
+    ('Ruusutarha', 'Mukissa raitoja ja muumimamma, ei tuotannossa', 'hahmo', 0 , 25.00, 50.00, 'https://www.muumimukit.com/wp-content/uploads/2014/10/Muumimuki-Ruusutarha.jpg'),
+    ('Kalassa', 'Erikoisversio kesälle', 'kesä', 0 , 20.00, 40.00, 'https://www.muumimukit.com/wp-content/uploads/2022/05/kalassa.jpg'),
+    ('Kevättalvi', 'Talviversio, julkaistu 2017', 'talvi', 1 , 25.00, 60.00, 'https://www.muumimukit.com/wp-content/uploads/2021/01/260120211611667614.jpeg'),
+    ('Matkalla', 'Finnair Juhlamuki 100v juhlille, julkaistu 2023', 'erikoismuki', 0, 30.00, 100.00, 'https://www.muumimukit.com/wp-content/uploads/2023/09/matkalla_1_300x238.jpg'),
+    ('Muuminpäivä (2018)', 'Yksi kaikkien aikojen halutuimmista muumimukeista', 'erikoismuki', 1 , 30.00, 100.00, 'https://www.muumimukit.com/wp-content/uploads/2021/01/260120211611668180.jpeg'),
+    ('Merituuli', 'Vuoden 2023 Muumin päivä -mukin nimi on Merituuli ja sitä myydään vain rajoitettu määrä', 'erikoismuki', 0 , 45.00, 100.00, 'https://www.muumimukit.com/wp-content/uploads/2023/05/muuminpv2023_1_300x238.jpg'),
+    ('Muuminpäivä (2021)', 'Myynnissä 9.8.2021', 'erikoismuki', 1 , 30.00, 55.00, 'https://www.muumimukit.com/wp-content/uploads/2021/08/muuminpaivamuki2021.jpg'),
+    ('Muumipeikko unelmoi', 'Julkaistu rajoitettu erö 2005', 'erikoismuki', 0 , 30.00, 55.00, 'https://www.muumimukit.com/wp-content/uploads/2014/10/Muumimuki-Muumipeikko-Unelmoi-Moomin-Mug-Moomintroll-Daydreaming.jpg'),
+    ('Saippuakuplia', 'julkaistu 2011, pikku myy hahmo mukana raidallisessa mukissa', 'erikoismuki', 0 , 26, 60, 'https://www.muumimukit.com/wp-content/uploads/2014/10/Muumimuki-Saippuakuplia.jpg');
+
