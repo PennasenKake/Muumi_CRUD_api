@@ -1,0 +1,56 @@
+.logo1 {
+    height: 50px; /* Säädä korkeus tarpeen mukaan */
+}
+
+.logo1-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aseta logo vasempaan reunaan */
+    flex: 1; /* Varmistaa, että logo vie oman tilansa */
+}
+
+footer {
+    display: flex;
+    flex-direction: column; /* Muuta suunta pystysuoraksi */
+    align-items: center; /* Keskitä sisältö */
+    background-color: #102538; /* Taustaväri */
+    padding: 20px; /* Lisää tilaa */
+}
+
+.links-container {
+    display: flex;
+    gap: 20px; /* Säädä väli linkkien välillä */
+    list-style-type: none; /* Poistaa listatyylin */
+    padding: 0; /* Poistaa sisennykset */
+}
+
+.links-container li {
+    display: inline; /* Linkit vierekkäin */
+}
+
+.links-container li a {
+    color: #ffffff; /* Tekstin väri */
+    text-decoration: none; /* Poista alleviivaus */
+    font-size: 16px; /* Fonttikoko */
+    font-weight: bold; /* Lihavoitu fontti */
+    padding: 10px; /* Lisää tilaa */
+}
+
+.links-container li a:hover {
+    text-decoration: underline; /* Lisää alleviivaus hoverissa */
+}
+
+.footer-content {
+    text-align: center; /* Keskitä teksti */
+    color: #ffffff; /* Tekstin väri */
+    margin-top: 10px; /* Lisää yläreunasta tilaa */
+}
+
+.footer-content a {
+    color: #ffffff; /* Linkkien väri */
+    margin-left: 5px; /* Lisää tilaa linkkien väliin */
+}
+
+.footer-content a:hover {
+    text-decoration: underline; /* Lisää alleviivaus hoverissa */
+}
