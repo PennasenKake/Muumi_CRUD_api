@@ -5,6 +5,16 @@ Avainsanoja; React, node, sql, rest-rajapinta, crud-sovellus...
 tarkoituksena luoda käyttäjälle mahdollisuus ylläpitää muumimuki kokoelmaa helpossa käyttöliittymässä
 
 
+TEHTÄVÄ LISTA;
+- lisää uusi painikeen toiminnot
+- haku toiminno
+- taulukon responsiviisuuden parantaminen
+- taulukon toimintojen parantaminen (....)
+- taulukossa näytetään tietyt arvot, 
+taulukon kaikki arvot (id, nimi, kuvaus, ostohinta, nykyinenhinta, kokoelmassa, määrä,)
+- mitä muuta ??
+- MITÄ MUUTA ?? 
+
 
 PROJEKTIN TIEDOSTORAKENNE
 
